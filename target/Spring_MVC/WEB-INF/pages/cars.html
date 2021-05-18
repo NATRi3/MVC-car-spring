@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cars</title>
+</head>
+<body>
+<div class="container">
+    <div class="row align-items-center">
+        <div th:each="car : ${cars}" class="card mb-2 mr-2">
+            <div th:text="${car.getId()}"></div>
+            <ul>
+                <li th:text="|Model ${car.getModel()}|"></li>
+                <li th:text="|Year ${car.getNumber()}|"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
